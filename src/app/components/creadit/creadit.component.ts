@@ -9,9 +9,12 @@ import Swal from 'sweetalert2';
 export class CreaditComponent implements OnInit {
   qttmoney:any;
   user:any;
+  info:any;
+  date: any;
   constructor(private app:AppService) { }
 
   ngOnInit(): void {
+    this.profile()
   }
 
 
@@ -38,5 +41,12 @@ export class CreaditComponent implements OnInit {
       })
       // console.log(res);
     })
+  }
+
+  profile(){
+    this.app.getProfile().subscribe((res:any) => {
+      this.info = res.user
+    })
+    this.date = new Date(this.info.createdAt)
   }
 }

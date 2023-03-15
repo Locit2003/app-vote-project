@@ -68,7 +68,7 @@
         <div class="product-item bg-light">
           <div class="card">
             <div class="thumb-content">
-              <a href="">
+              <a  [routerLink]="['/candidate-detail/', can.id]">
                 <img
                   style="height: 300px"
                   class="card-img-top img-fluid mt-2"
@@ -87,11 +87,9 @@
                 <li class="list-inline-item">
                   <a href="">Contest: {{ can.contest.name }}</a>
                 </li>
-                <li class="list-inline-item" style="font-size: 20px">
-                  <a href=""
-                    ><i class="fa fa-map-marker" aria-hidden="true"></i
-                    >{{ can.address }}</a
-                  >
+                <li class="list-inline-item" style="font-size: 17px">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i
+                    >{{ can.address }}
                 </li>
               </ul>
               <p class="card-text">Total vote: {{ can.quantityVote }}</p>
@@ -153,8 +151,8 @@
                   class="module-header aos-init aos-animate"
                   data-aos="fade-up"
                 >
-                  <span class="id">04</span>
-                  <h2 class="title"><span>Đối tác khách hàng</span></h2>
+                  <span class="id">01</span>
+                  <h2 class="title"><span>Partners customers</span></h2>
                 </div>
                 <div class="module-content active">
                   <div class="branch-width">
@@ -304,3 +302,4 @@
   </div>
   <!-- Container End -->
 </section>
+
